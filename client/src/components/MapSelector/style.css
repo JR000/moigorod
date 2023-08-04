@@ -1,0 +1,23 @@
+.right-col-container {
+    position: absolute;
+}
+
+.right-col-flex-wrapper {
+    /* display: flex; */
+    /* justify-items: center; */
+    width: 60%;
+
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+.img {
+    height: 40vh;
+}
+
+.svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+}

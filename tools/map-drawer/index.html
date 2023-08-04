@@ -1,0 +1,88 @@
+<style>
+    svg {
+
+    }
+</style>
+
+<script>
+    function previewFile() {
+    // Where you will display your image
+    var preview = document.querySelector('img');
+    // The button where the user chooses the local image to display
+    var file = document.querySelector('input[type=file]').files[0];
+    // FileReader instance
+    var reader  = new FileReader();
+
+    // When the image is loaded we will set it as source of
+    // our img tag
+    reader.onloadend = function () {
+      preview.src = reader.result;
+    }
+
+    
+    if (file) {
+      // Load image as a base64 encoded URI
+      reader.readAsDataURL(file);
+    } else {
+      preview.src = "";
+    }
+  }
+</script>
+
+
+<style>
+    .container {
+        position: absolute;
+        margin-left: 100px;
+    }
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 200;
+    }
+
+    img {
+        position: relative;
+    }
+</style>
+
+<!-- <input type="file" onchange="previewFile()"><br> -->
+<div class="container">
+    <img src="building-map.png" height="200" alt="Image preview...">
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1064 649"
+    style="height: 200px; z-index: 2000;"
+    >
+    <path
+        fill="#17b978"
+        fill-opacity="0.3"
+        stroke="#17b978"
+        stroke-width="10"
+        d="M 95 1
+        L 95 46
+        L 1 46
+        L 1 300
+        L 208 300
+        L 208 1
+        L 96 1
+        
+        "
+    ></path>
+    </svg>
+</div>
+
+<!-- 
+    96 1
+95 46
+1 46
+1 300
+208 300
+208 1
+
+
+
+
+
+ -->

@@ -1,0 +1,14 @@
+.building-map-cols-container {
+    display: flex;
+    height: 100vw;
+}
+
+.left-col {
+    flex-grow: 1;
+    background-color: aqua;
+}
+
+.right-col {
+    flex-grow: 3;
+    background-color: red;
+}
